@@ -1,5 +1,10 @@
 const express = require("express");
 const app = express();
+
+const JWT = require("jsonwebtoken");
+const SECRET_KEY=process.env.JWT;
+
+
 app.use(express.json());
 const {
   models: { User },
